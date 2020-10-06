@@ -17,7 +17,10 @@ namespace ChessRules
 
         public Chess Move(string move)
         {
-            return new Chess(this.Fen);
+            Chess nextChess = new Chess(this.Fen);
+            Color color = Color.white;
+            color = color.FlipColor();
+            return nextChess;
         }
 
         public Char GetFigureAt(int x, int y)
